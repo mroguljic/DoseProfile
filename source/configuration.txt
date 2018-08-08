@@ -1,0 +1,4 @@
+particleEnergy=3.673
+detectorThickness=0.5
+outputTree=3.673MeV.root
+particleType=proton
