@@ -26,7 +26,7 @@ def plotNIEL(rootFiles,pltMin,pltMax,nPoints=100):
 
 
 	for filename in rootFiles:
-		print filename
+		print(filename)
 		tfile = r.TFile.Open(filename)
 		ttree = tfile.Get("ttree")
 		for event in ttree:
@@ -54,5 +54,5 @@ def plotNIEL(rootFiles,pltMin,pltMax,nPoints=100):
 
 	power_smooth = interp1d(depth,NIEL)
 	plt.plot(depth,power_smooth(depth))
-	print np.average(power_smooth(depth)), np.average(NIEL)
+	print(np.average(power_smooth(depth)), np.average(NIEL))
 	plt.savefig('NIEL.pdf')

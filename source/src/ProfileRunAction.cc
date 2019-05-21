@@ -42,7 +42,7 @@ ProfileRunAction::ProfileRunAction()
 
   UserInput input;
 
-  analysisManager->CreateH1("dEdX","Dose Profile", 100, 0., input.GetDetThickness()/(1.*mm));
+  analysisManager->CreateH1("dEdX","Dose Profile", 100, 0., input.GetDetThickness()/(1.*mm)+0.1*cm);
   analysisManager->CreateNtuple("ttree","ttree");
   analysisManager->CreateNtupleDColumn("StepZ");
   analysisManager->CreateNtupleDColumn("StepEDep");
